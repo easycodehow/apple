@@ -1,0 +1,226 @@
+@charset "utf-8";
+@font-face { /* 웹폰트를 서버에 같이 올려서 링크속도가 느려지지 않게 함 */
+  font-family:"Ubuntu-Bold";
+  src:url("font/Ubuntu-Bold.woff"); 
+}
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+}
+body{
+  overflow-x:hidden;
+}
+ul{
+  list-style-type:none;
+}
+a{
+  text-decoration:none;
+}
+h1{
+  display:none;
+}
+nav{
+  background-color:#222;
+  height:44px;
+  line-height:44px;
+}
+.mobile-menu{
+  display:flex;
+  justify-content: space-between;
+}
+.mobile-menu li a{
+  display:block;
+  padding:0 20px;
+  color:#fff;
+  font-size:12px;
+}
+.mobile-menu .apple a{
+  text-indent:-9999em;
+  background:url("../img/apple-logo.svg") no-repeat 50%;
+}
+.mobile-menu .cart a{
+  text-indent:-9999em;
+  background:url("../img/cart.svg") no-repeat 50%;
+}
+#gnb-wrap{
+  display:none;
+  position:absolute;
+  width:100%;
+  background-color:#111;
+}
+#gnb{
+  padding:0px 30px;
+}
+#gnb li{
+  border-bottom:1px solid rgba(255,255,255,0.2);
+}
+#gnb li a{
+  color:#fff;
+  display:block;
+  padding:0px 5px;
+  font-size:12px;
+}
+#gnb .apple,
+#gnb .search,
+#gnb .cart{
+  display:none; /* 데스크탑용 메뉴들 감추기 */
+}
+#ribbon-cont{
+  background-color:#e34140;
+  text-align:center;
+  font-size:12px;
+  line-height:1.6;
+  padding:10px 0px;
+  color:#fff;
+}
+#ribbon-cont span{
+  display:block;
+}
+#visual .copy-box .apple{
+  display:none;
+}
+#visual .img-box{
+  display:none;
+}
+#visual{
+  width:100%;
+  height:500px;
+  background-color:#eeeffe;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+#visual .copy-box{
+	text-align:center; 
+	padding:15px;
+	-border:1px solid green;
+}
+#visual .img-box-mb{ 
+	-border:1px solid red;	
+}
+#visual .copy-box .apple-mb{
+	padding:8px;	
+}
+#visual .copy-box h2{
+	font-size:24px;
+	letter-spacing:-3px;
+	color:#222;
+	margin:10px 0;
+}
+#visual .copy-box .link a{
+	font-size:14px;
+	font-weight:bold;
+	color:#379CD9;
+	text-decoration:none;
+	display:inline-block;	
+}
+/* 상품섹션 1*/
+#sect01{
+  height:500px;
+  background:url("../img/sect01-bg-mb.jpg") no-repeat center center;
+}
+/* 상품섹션 2*/
+#sect02{
+  height:500px;
+  background:url("../img/sect02-bg-mb.jpg") no-repeat center center;
+}
+/* 상품섹션1, 상품섹션2의 공통 카피박스 ---*/
+.copy-box-lg{
+	width:100%;
+	padding:15px 0;
+	text-align:center;	
+}
+.copy-box-lg h2{
+	font-family: 'Ubuntu-Bold', sans-serif;
+	font-size:26px;
+	letter-spacing:-1px;
+	word-spacing:2px;
+	color:#222;
+	padding:12px;
+}
+.copy-box-lg h3{
+	font-size:17px;
+	color:#444;
+}
+.copy-box-lg .link a{
+	font-size:14px;
+	color:#379CD9;
+	font-weight:bold;
+	text-decoration:none;
+	display:inline-block; /* 인라인요소는 패딩이 크기로 적용안됨 */	
+	padding:10px 20px;
+}
+
+/* 상품섹션 3*/
+#sect03 .content{
+  height:400px;
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
+#sect03 .content.cont1{
+  background:url("../img/cont1-mb.jpg") no-repeat center center;
+}
+#sect03 .content.cont2{
+  background:url("../img/cont2-mb.jpg") no-repeat center center;
+}
+#sect03 .content.cont3{
+  background:url("../img/cont3-mb.jpg") no-repeat center center;
+}
+#sect03 .content.cont4{
+  background:url("../img/cont4-mb.jpg") no-repeat center center;
+}
+/*.content 의 광고박스들 */
+.copy-box-sm{ 
+	width:300px;
+	text-align:center;
+	-border:1px solid green;
+}
+.copy-box-sm h2{
+	font-family: 'Ubuntu-Bold', sans-serif;
+	font-size:24px;
+	letter-spacing:-2px;
+	color:#222;
+	margin:12px 0;
+}
+.copy-box-sm h3{
+	font-size:17px;
+	font-weight:normal;
+	color:#777;
+	margin-bottom:10px;
+}
+
+.copy-box-sm .link a{
+	font-size:16px;
+	color:#379CD9;
+	font-weight:bold;
+	text-decoration:none;
+	display:inline-block;	
+	padding:5px;
+}
+footer{
+  background-color:#ededed;
+  color:#777;
+  padding:30px 10px;
+  font-size:9px;
+  line-height:1.8;
+}
+.foot-link ul li{
+  display:inline-block;
+}
+.foot-link ul li:not(:last-child)::after{
+  content:"";
+  display:inline-block;
+  width:1px;
+  height:8px;
+  background-color:#999;
+}
+.foot-link ul li a{
+  color:#0bace1;
+  padding:0px 3px;
+}
+address{
+  font-style:normal;
+}

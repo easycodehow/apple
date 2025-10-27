@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+.mobile-menu{
+  display:none;
+}
+#gnb-wrap{
+  max-width:980px; /*  화면너비가 980이하에서는 100%크기이며 980이상이되어도 980까지만 크기가 정해짐 */
+  margin:auto;
+  display:block !important;
+  position:static; /* 모바일퍼스트 디자인에서 absolute를 준것을 원상복귀시켰음 */
+}
+#gnb{
+  background-color:#222;
+  display:flex;
+  justify-content: space-between;
+}
+#gnb .apple,
+#gnb .search,
+#gnb .cart{
+  display: block;
+}
+#gnb li.apple a{
+  text-indent: -9999em;
+  padding:0px 10px;
+  background:url("../img/apple-logo.svg") no-repeat;
+}
+#gnb li.search a{
+  text-indent: -9999em;
+  padding:0px 10px;
+  background:url("../img/search.svg") no-repeat;
+}
+#gnb li.cart a{
+  text-indent: -9999em;
+  padding:0px 10px;
+  background:url("../img/cart.svg") no-repeat;
+}
+#ribbon-cont{
+  font-size:14px;
+}
+#ribbon-cont span{
+  display:inline;
+}
+#visual{
+  height:680px;
+}
+#visual .copy-box .apple-mb{
+  display:none;
+}
+#visual .copy-box .apple{
+  display:block;
+}
+#visual .img-box{
+  display:flex;
+  justify-content: center;
+}
+#visual .img-box-mb{
+  display:none;
+}
+#visual .img-box img{
+  margin:30px;
+}
+#sect01{
+  height:700px;
+  background:url("../img/sect01-bg.jpg") no-repeat center center;
+}
+#sect02{
+  height:700px;
+  background:url("../img/sect02-bg.jpg") no-repeat center center;
+}
+#sect03 .row{
+  display:flex;
+  justify-content: space-between;
+  gap:12px;
+  margin:12px;
+}
+#sect03 .content{
+  height:580px;
+  flex:1;
+}
+#sect03 .content.cont1{
+  background:url("../img/cont1.jpg") no-repeat center center;
+}
+#sect03 .content.cont2{
+  background:url("../img/cont2.jpg") no-repeat center center;
+}
+#sect03 .content.cont3{
+  background:url("../img/cont3.jpg") no-repeat center center;
+}
+#sect03 .content.cont4{
+  background:url("../img/cont4.jpg") no-repeat center center;
+}
+footer{
+  padding:50px 0px;
+  line-height:2;
+  font-size:12px;
+}
+footer .inner{
+  max-width:980px;
+  margin:auto;
+}
+footer .inner .row{
+  display:flex;
+  justify-content: space-between;
+}

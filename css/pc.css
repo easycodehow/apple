@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+/* 600이상의 pc스타일 */
+.mobile-menu{
+	display:none;
+}
+#gnb-wrap{
+	/* 화면이 980px이하이면 100%너비이고 화면이 980px보다 커져도 최대너비가 980px */
+	max-width:980px; 
+	margin:auto;
+	display:block !important;
+	position:static; /* 모바일에서 준 포지션 원상복귀 */
+}
+#gnb{
+	background-color:#222; /* nav색상과 맞추기위함 */
+	display:flex;  /* li를 배분하기 위함 */
+	justify-content:space-between;	
+}
+/* pc메뉴 보이게함 */
+#gnb .apple, 
+#gnb .search,
+#gnb .cart{
+	display:block;	
+}
+#gnb li.apple a{
+	text-indent:-9999em;
+	padding:0 10px;
+	background:url("../img/apple-logo.svg") no-repeat;	
+}
+#gnb li.search a{
+	text-indent:-9999em;
+	padding:0 10px;
+	background:url("../img/search.svg") no-repeat;	
+}
+#gnb li.cart a{
+	text-indent:-9999em;
+	padding:0 10px;
+	background:url("../img/cart.svg") no-repeat;	
+}
+#ribbon-cont{
+	font-size:14px;
+}
+#ribbon-cont span{
+	display:inline; /* 줄바꿈처리 원상복귀 */ 
+}
+
+
+/* 메인비주얼(애플박스와 카피박스포함)
+-----------------------------*/
+#visual{
+	height:680px;
+}
+/* 카피박스안의 모바일 애플은 감추고 pc용 애플 보이게 함 */
+#visual .copy-box .apple-mb{
+	display:none;	
+}
+#visual .copy-box .apple{
+	display:block;	
+}
+#visual .copy-box{
+	padding:20px;
+}
+#visual .copy-box h2{
+	font-size:50px;
+	margin:20px 0;
+}
+#visual .link a{
+	font-size:18px;
+}
+/*메인비주얼의 이미지 3개 가진 박스 
+  모바일에서 display:none 을 플렉스박스로 선언함. 
+  display:block 으로지정하려면 이미지 3개가 나란히 놓일수 있는 크기지정 필요함*/
+#visual .img-box{ 
+	display:flex; 
+	justify-content:center; 
+	-border:1px solid red;
+}
+#visual .img-box-mb{ /*모바일 이미지박스는 감춤 */
+	display:none;
+}
+#visual .img-box img{
+	margin:30px;	
+}
+
+/* 상품섹션1 
+--------------------------------------*/
+#sect01{
+	height:700px;
+	background:url("../img/sect01-bg.jpg") no-repeat center center;
+	/* 자식인 .copy-box-lg를 가운데 위에 배치함 */
+	display:flex;
+	justify-content:center; /* 메인축(가로) 따라 가운데 정렬 */
+	align-items:flex-start; /* 교차축(세로) 위에 정렬 */
+}
+.copy-box-lg{
+	-border:3px solid red;	
+}
+/* 상품섹션2 
+--------------------------------------*/
+#sect02{
+	height:700px;
+	background:url("../img/sect02-bg.jpg") no-repeat center center;
+	/* 자식인 .copy-box-lg를 가운데 위에 배치 */
+	display:flex;
+	justify-content:center; 
+	align-items:flex-start; 
+}
+/* 상품섹션1, 상품섹션2의 광고박스 */
+.copy-box-lg{
+	width:980px;
+}
+.copy-box-lg h2{
+	font-size:50px;
+}
+.copy-box-lg h3{
+	font-size:24px;
+}
+.copy-box-lg .link a{
+	font-size:18px;
+}
+
+/* 상품섹션3 (4분할된 영역)
+--------------------------------------*/
+/* .content를 2개씩 가진 행으로 .content를 양쪽으로 붙여서 배치한다*/
+#sect03 .row{
+	display:flex;
+	justify-content:space-between;	
+	gap:12px;
+	margin:12px;
+}
+#sect03 .content{ /* 섹션4분할 영역들*/
+	height:580px;	
+	flex:1;
+}
+#sect03 .content.cont1{
+	background:url("../img/cont1.jpg") no-repeat center center;	
+}
+#sect03 .content.cont2{
+	background:url("../img/cont2.jpg") no-repeat center center;	
+}
+#sect03 .content.cont3{
+	background:url("../img/cont3.jpg") no-repeat center center;
+}
+#sect03 .content.cont4{
+	background:url("../img/cont4.jpg") no-repeat center center;	
+}
+
+/*.content 의 광고박스들 */
+.copy-box-sm h2{
+	font-family: 'Ubuntu', sans-serif;
+	font-size:38px;
+}
+.copy-box-sm h3{
+	font-size:20px;
+}
+.copy-box-sm .link a{
+	font-size:16px;
+}
+
+/* footer(.foot-note, .row(.copyright,.foot-link), address)*/
+footer{
+	padding:50px 0;
+	line-height:2;
+	font-size:12px;
+}
+footer .inner{
+	max-width:980px;
+	margin:auto;	
+}
+footer .inner .row{
+	display:flex;
+	justify-content:space-between;
+}

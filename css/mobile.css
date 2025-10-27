@@ -1,0 +1,260 @@
+@charset "utf-8";
+@font-face {
+  font-family:"Ubuntu-Bold";
+  src:url("font/Ubuntu-Bold.woff"); 
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+body{
+	overflow-x:hidden;
+}
+ul{
+	list-style-type:none;	
+}
+a{
+	text-decoration:none;
+}
+/* header(h1, nav, #ribbon-cont) 
+--------------------------------------------------*/
+h1{
+	display:none;
+}
+/* nav( ul.mobile-menu, #gnb-wrap > ul#gnb) */
+nav{
+	background-color:#222;
+	height:44px;
+	line-height:44px;
+}
+/* ul.mobile-menu > li(더보기, 애플, 장바구니)의 배분정렬 */
+.mobile-menu{
+	display:flex; 
+	justify-content:space-between;	
+}
+.mobile-menu li a{
+	display:block;
+	padding:0 20px;
+	color:#fff;
+	font-size:12px;
+}
+.mobile-menu .apple a{
+	text-indent:-9999em;
+	background:url("../img/apple-logo.svg") no-repeat 50%;	
+}
+.mobile-menu .cart a{
+	text-indent:-9999em;
+	background:url("../img/cart.svg") no-repeat 50%;	
+}
+
+/* div#gnb-wrap은 더보기 클릭시 나타남 */
+#gnb-wrap{
+	display:none;
+	position:absolute; /* 메인비주얼 위에 겹쳐올리기 위함 */
+	width:100%;
+	background-color:#111;
+}
+/* ul#gnb의 li중에서 pc메뉴 감춤*/
+#gnb .apple, 
+#gnb .search,
+#gnb .cart{
+	display:none;	
+}
+#gnb{		
+	padding:0px 30px; 
+}
+#gnb li{
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+#gnb li a{
+	color:#fff;
+	text-decoration:none;
+	display:block;
+	padding:0 5px;
+	font-size:12px;
+}
+/* 모바일에서 span을 블록으로 만들어서 줄바꿈처리함 */
+#ribbon-cont{
+	background-color:#E34140;
+	text-align:center;
+	font-size:12px;
+	line-height:1.6;
+	padding:10px 0;
+	color:#fff;
+}
+/* 모바일에서 줄바꿈처리 */
+#ribbon-cont span{
+	display:block; 
+}
+	
+/* 메인비주얼(애플박스와 카피박스포함)
+-----------------------------*/
+/* 카피박스안에 있는 pc용 이미지 감추기 */
+#visual .copy-box .apple{ 
+	display:none;
+}
+/* pc용 이미지박스 감추기 */
+#visual .img-box{ 
+	display:none;
+}
+#visual{
+	width:100%;
+	height:500px;
+	background-color:#eeeffe;
+	/* .copy-box와 .img-box 정렬 */
+	display:flex;
+	flex-direction:column; /* 메인축이 열(세로)이 됨 */
+	justify-content:center; /* 메인축에 따라 수직선의 중간부분에 정렬 */
+	align-items:center; /* 교차축에 따라 수평선의 가운데 정렬 */
+}
+#visual .copy-box{
+	text-align:center; 
+	padding:15px;
+	-border:1px solid green;
+}
+#visual .img-box-mb{ 
+	-border:1px solid red;	
+}
+#visual .copy-box .apple-mb{
+	padding:8px;	
+}
+#visual .copy-box h2{
+	font-size:24px;
+	letter-spacing:-3px;
+	color:#222;
+	margin:10px 0;
+}
+#visual .copy-box .link a{
+	font-size:14px;
+	font-weight:bold;
+	color:#379CD9;
+	text-decoration:none;
+	display:inline-block;	
+}
+
+/* 상품섹션1 ----*/
+#sect01{ 
+	height:500px;
+	background:url("../img/sect01-bg-mb.jpg") no-repeat center center;
+}
+
+/* 상품섹션2 ----*/
+#sect02{
+	height:500px;
+	background:url("../img/sect02-bg-mb.jpg") no-repeat center center;
+}
+
+/* 상품섹션1, 상품섹션2의 공통 카피박스 ---*/
+.copy-box-lg{
+	width:100%;
+	padding:15px 0;
+	text-align:center;	
+}
+.copy-box-lg h2{
+	font-family: 'Ubuntu-Bold', sans-serif;
+	font-size:26px;
+	letter-spacing:-1px;
+	word-spacing:2px;
+	color:#222;
+	padding:12px;
+}
+.copy-box-lg h3{
+	font-size:17px;
+	color:#444;
+}
+.copy-box-lg .link a{
+	font-size:14px;
+	color:#379CD9;
+	font-weight:bold;
+	text-decoration:none;
+	display:inline-block; /* 인라인요소는 패딩이 크기로 적용안됨 */	
+	padding:10px 20px;
+}
+
+
+/* 상품섹션3 (4분할된 영역)
+--------------------------------------*/
+#sect03 .content{ /* 4개박스의 공통클래스 */
+	height:400px;
+	width:100%; 
+	/* 자식인 .copy-box-sm을 가운데 위로 배치 */
+	display:flex;
+	justify-content:center;
+}
+#sect03 .content.cont1{
+	background:url("../img/cont1-mb.jpg") no-repeat center center;	
+}
+#sect03 .content.cont2{
+	background:url("../img/cont2-mb.jpg") no-repeat center center;	
+}
+#sect03 .content.cont3{
+	background:url("../img/cont3-mb.jpg") no-repeat center center;	
+}
+#sect03 .content.cont4{
+	background:url("../img/cont4-mb.jpg") no-repeat center center;	
+}
+/*.content 의 광고박스들 */
+.copy-box-sm{ 
+	width:300px;
+	text-align:center;
+	-border:1px solid green;
+}
+.copy-box-sm h2{
+	font-family: 'Ubuntu-Bold', sans-serif;
+	font-size:24px;
+	letter-spacing:-2px;
+	color:#222;
+	margin:12px 0;
+}
+.copy-box-sm h3{
+	font-size:17px;
+	font-weight:normal;
+	color:#777;
+	margin-bottom:10px;
+}
+
+.copy-box-sm .link a{
+	font-size:16px;
+	color:#379CD9;
+	font-weight:bold;
+	text-decoration:none;
+	display:inline-block;	
+	padding:5px;
+}
+
+/* footer(.foot-note, .row(.copyright,.foot-link), address)*/
+footer{
+	background-color:#ededed;
+	color:#777;
+	padding:30px 10px;
+	font-size:10px;
+	line-height:1.8;
+}
+.foot-link ul li{
+	display:inline-block;
+}
+/* 첫번째 li제외하고 가상컨텐츠 구분선을 li안에 만듬 */
+.foot-link ul li:not(:last-child)::after{
+	content:"";
+	display:inline-block;
+	width:1px;
+	height:8px;
+	background-color:#999;	
+}
+.foot-link ul li a{
+	color:#888;
+	padding:0px 3px;
+}
+.foot-link ul li:first-child a{
+	padding-left:0px;	
+}
+address{
+	font-style:normal;	
+	color:#777;
+}
+address span{
+	display:inline-block; /* span묶음별로 정렬됨 */
+}
+
+
